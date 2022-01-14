@@ -1,18 +1,16 @@
-# include <stdio.h>
+#include <stdio.h>
 
 int	main(void)
 {
         
-	int	a;
-        int 	b;
-	int	c;
-	int	d;
+	int	time_b;
+        int 	utc_a;
+	int	utc_b;
+	int	time_a;
 
-	scanf("%d %d %d %d", &a,&b,&c,&d);
-          a=b-c+d;
-	  a=a%24;
-
-                     
-        printf ("%d\n  ",a );
+	scanf("%d %d %d", &utc_a, &utc_b, &time_a);
+	time_b = time_a - utc_a + utc_b;
+        time_b = time_b % 24;
+	printf("%d", time_b);
 	return (0);
 }
