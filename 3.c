@@ -11,6 +11,10 @@ int	main(void)
 	scanf("%d %d %d", &utc_a, &utc_b, &time_a);
 	time_b = time_a - utc_a + utc_b;
         time_b = time_b % 24;
+	if (time_b < 0)
+	{
+		time_b = time_b + 24;
+	}
 	printf("%d", time_b);
 	return (0);
 }
